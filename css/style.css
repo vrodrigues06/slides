@@ -30,8 +30,7 @@ img {
   width: 80vw;
   flex-shrink: 0;
   max-width: 800px;
-  margin: 20px;
-
+  margin: 0 20px;
   border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .4);
@@ -65,4 +64,53 @@ img {
 
 [data-control="slide"] li.active a, [data-control="slide"] li a:hover {
   background: #e54;
+}
+
+.custom-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.custom-controls li {
+  opacity: .8;
+  transform: scale(.8);
+  width: 50px;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .5);
+  transition: .3s;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.arrow-nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.arrow-nav button {
+  cursor: pointer;
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border: 4px;
+  background: #fb5 url('../img/arrow.svg') center center no-repeat;
+}
+
+.arrow-nav button:hover {
+  background: rgb(237, 156, 36) url('../img/arrow.svg') center center no-repeat;
+}
+
+.arrow-nav button.prev {
+  transform: rotate(-180deg);
 }
